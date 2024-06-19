@@ -1,0 +1,120 @@
+.header {
+    height: 64px;
+    align-content: center;
+    
+}
+/* .container {
+    width: 1408px;
+} */
+ .header_menu {
+    justify-content: space-between;
+ }
+.sub1{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #252525;
+}
+.body2{
+    font-weight: 400;
+    color: #888888;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+.menu_item {
+    font-family: system-ui;
+}
+.h1 {
+    font-family: system-ui;
+}
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+.ellipse {
+width: 500px;
+height: 500px;
+margin-top: -264px;
+margin-left: 292px;
+margin-bottom: -173px;
+}
+.ellipse1 {
+width: 650px;
+height: 650px;
+margin-top: -356px;
+margin-left: -289px;
+margin-bottom: -225px;
+}
+.main_inc {
+height: 442px;
+margin-left: 125px;
+.text_inc {
+    width: 870px;
+    height: 220px;
+
+    p{
+        margin-top: 18px;
+        margin-bottom: 38px;
+    }
+}
+.main_inc_slide {
+    height: 442px;
+}
+}
+.vector_left {
+width: 24px;
+height: 24px;
+margin: 4px;
+img {
+    width: 7px;
+    height: 14px;
+}
+}
+.vector_right {
+width: 24px;
+height: 24px;
+margin: 4px;
+img {
+    width: 7px;
+    height: 14px;
+}
+}
+.text_contact {
+margin-left: 20px;
+align-content: space-evenly;
+}
+.intro p {
+width: 668px;
+margin-top: 10px;
+margin-bottom: 15px;
+}
+.des {
+width: 468px;
+height: 216px;
+.icon {
+    .des_icon {
+        width: 12px;
+        height: 12px;
+        align-content: center;
+    }
+}
+}
+.contact_btn {
+width: 100px;
+height: 40px;
+color: white;
+font-weight: 600;
+font-size: 15px;
+line-height: 20px;
+text-align: center;
+align-content: center;
+}
+.back_gr {
+    margin-bottom: -850px;
+    height: 850px;
+}

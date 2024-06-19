@@ -1,0 +1,57 @@
+@tailwind base;
+@layer base {
+    h1 {
+        font-weight: 500;
+        color: #252525;
+        font-size: 2.06rem;
+        line-height: 2.75rem;
+    }
+    h2 {
+        font-weight: 500;
+        color: #252525;
+        font-size: 2rem;
+        line-height: 2.75rem;
+    }
+
+    h4 {
+        font-weight: 500;
+        color: #252525;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    h5 {
+        font-weight: 500;
+        color: #252525;
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+
+    }
+
+    h6 {
+        font-weight: 500;
+        color: #252525;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+    }
+    button {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    p {
+        font-weight: 400;
+        color: #000000A3;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    span {
+        font-weight: 700;
+        color: #000000A3;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+  }
+@tailwind components;
+@tailwind utilities;
