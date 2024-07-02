@@ -6,60 +6,520 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <link rel="stylesheet" href="./src/css/style.css"> -->
-     <style>
-        .swiper-wrapper {
-      width: 100%;
-      height: max-content !important;
-      padding-bottom: 64px !important;
-      -webkit-transition-timing-function: linear !important;
-      transition-timing-function: linear !important;
-      position: relative;
-      }
-      .swiper-pagination-bullet {
-      background: #4f46e5;
-      }
-     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer=""></script>
+    <style>
+        .container {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 1rem;
+            padding-left: 1rem;
+}
+    </style>
 </head>
-<body>
-       <!--HTML CODE-->
-      <div class="w-full relative">
-        <div class="swiper multiple-slide-carousel swiper-container relative">
-         <div class="swiper-wrapper mb-16">
-           <div class="swiper-slide">
-             <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-               <span class="text-2xl font-semibold text-indigo-600">Slide 1 </span>
-             </div>
-           </div>
-           <div class="swiper-slide">
-             <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-               <span class="text-2xl font-semibold text-indigo-600">Slide 2 </span>
-             </div>
-           </div>
-           <div class="swiper-slide">
-             <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-               <span class="text-2xl font-semibold text-indigo-600">Slide 3 </span>
-             </div>
-           </div>
-           <div class="swiper-slide">
-             <div class="bg-indigo-50 rounded-2xl h-96 flex justify-center items-center">
-               <span class="text-2xl font-semibold text-indigo-600">Slide 4 </span>
-             </div>
-           </div>
-         </div>
-         <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12">
-           <button id="slider-button-left" class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full  hover:bg-indigo-600 !-translate-x-16" data-carousel-prev>
-             <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-               <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-             </svg>
-           </button>
-           <button id="slider-button-right" class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 !translate-x-16" data-carousel-next>
-             <svg class="h-5 w-5 text-indigo-600 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-               <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-             </svg>
-           </button>
-         </div>
+<body class="bg-gray-100">
+  <!-- <header>
+    <div class="container mx-auto">
+        <nav class="flex justify-between ">
+            <div class="logo ">
+                <a href="">
+                    <img src="./src/image/Logo 1.png" alt="">
+                </a>                   
+            </div>
+            <div class="md:static absolute bg-white md:min-h-fit min-h-[50vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col text-base md:items-center font-medium md:gap[4vm] gap-6">
+                    <li>
+                        <a class="hover:text-gray-500" href="">Ưu đãi</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Dịch vụ</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Đội ngũ bác sĩ</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Bảng giá</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Thư viện</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+              <div class="hotline flex rounded-full justify-center shadow-md hover:bg-slate-50 ">
+                <a class="items-center pl-4 pr-6 flex  " href="tel:19001860" title="19001860">
+                    <div class="hotline-item w-6 h6 ">
+                        <img src="./image/icons/Phone.png" alt="" >
+                    </div>
+                    <div class="hotline-text text-white text-sm font-semibold leading-6">
+                        Hotline: 1900 1860
+                    </div>
+                </a>
+                <ion-icon name="menu-outline"></ion-icon>
+              </div>
+            </div>
+        </nav>
+    </div>
+  </header> -->
+
+  <!-- <header class="w-full h-16 bg-indigo-600 drop-shadow-lg">
+    <div class="container px-4 md:px-0 h-full mx-auto flex justify-between items-center">
+
+        <a class="text-yellow-400 text-xl font-bold italic" href="https://www.kindacode.com">KINDA<span
+                class="text-white">CODE</span></a>
+
+        <ul id="menu" class="hidden fixed top-0 right-0 px-10 py-16 bg-gray-800 z-50
+            md:relative md:flex md:p-0 md:bg-transparent md:flex-row md:space-x-6">
+
+            <li class="md:hidden z-90 fixed top-4 right-6">
+                <a href="javascript:void(0)" class="text-right text-white text-4xl"
+                    onclick="toggleMenu()">&times;</a>
+            </li>
+
+            <li>
+                <a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Home</a>
+            </li>
+            <li>
+                <a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Something</a>
+            </li>
+            <li>
+                <a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Forums</a>
+            </li>
+
+            <li>
+                <a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">About</a>
+            </li>
+            <li>
+                <a class="text-white opacity-70 hover:opacity-100 duration-300" href="#">Contact</a>
+            </li>
+        </ul>
+        <div class="flex items-center md:hidden">
+            <button class="text-white text-4xl font-bold opacity-70 hover:opacity-100 duration-300"
+                onclick="toggleMenu()">
+                &#9776;
+            </button>
         </div>
+
+  </header> -->
+
+
+  <!-- <div class="main_inc relative z-10 overflow-hidden">
+    <div class="container flex overflow-x-visible">
+        <div class="text_inc mr-8">
+            <h1 class="text_title ">Chương trình ưu đãi:</h1>
+            <p class=" text-slate-500 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis porta. Vulputate tellus sapien pat sit ipsum molestie pharetran da volutpat semper.</p>
+            <div class="vector flex ">
+                <div class="vector_left flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" >
+                        <img  src="./image/icons/vector_left.svg" alt="">
+                </div>
+                <div class="vector_right   flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" >
+                        <img  src="./image/icons/Vector_right.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="swiper mySwiper1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide ">
+                <div class="inc_img ">
+                    <img class="img_slide" src="./src/image/inc1.png" alt="">
+                </div>
+                <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+                    <div class="text-dep text-center">
+                        <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                        <h5 class=" ">Gói khám thai tổng quát</h5>
+                        <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                    </div>
+                    <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+                </div>   
+              </div>
+              <div class="swiper-slide">
+                <div class="inc_img ">
+                    <img class="img_slide" src="./src/image/inc1.png" alt="">
+                </div>
+                <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+                    <div class="text-dep text-center">
+                        <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                        <h5 class=" ">Gói khám thai tổng quát</h5>
+                        <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                    </div>
+                    <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+                </div>   
+              </div>
+              <div class="swiper-slide">
+                <div class="inc_img ">
+                    <img class="img_slide" src="./src/image/inc1.png" alt="">
+                </div>
+                <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+                    <div class="text-dep text-center">
+                        <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                        <h5 class=" ">Gói khám thai tổng quát</h5>
+                        <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                    </div>
+                    <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+                </div>   
+              </div>
+              <div class="swiper-slide">
+                <div class="inc_img ">
+                    <img class="img_slide" src="./src/image/inc1.png" alt="">
+                </div>
+                <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+                    <div class="text-dep text-center">
+                        <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                        <h5 class=" ">Gói khám thai tổng quát</h5>
+                        <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                    </div>
+                    <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+                </div>   
+              </div>
         
+            </div>
+            
+          </div>
+    </div>
+    
+  </div> -->
+
+
+  <!-- <div class="swiper mySwiper1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide ">
+        <div class="inc_img ">
+            <img class="img_slide" src="./src/image/inc1.png" alt="">
+        </div>
+        <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+            <div class="text-dep text-center">
+                <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                <h5 class=" ">Gói khám thai tổng quát</h5>
+                <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+            </div>
+            <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+        </div>   
+      </div>
+      <div class="swiper-slide">
+        <div class="inc_img ">
+            <img class="img_slide" src="./src/image/inc1.png" alt="">
+        </div>
+        <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+            <div class="text-dep text-center">
+                <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                <h5 class=" ">Gói khám thai tổng quát</h5>
+                <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+            </div>
+            <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+        </div>   
+      </div>
+      <div class="swiper-slide">
+        <div class="inc_img ">
+            <img class="img_slide" src="./src/image/inc1.png" alt="">
+        </div>
+        <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+            <div class="text-dep text-center">
+                <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                <h5 class=" ">Gói khám thai tổng quát</h5>
+                <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+            </div>
+            <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+        </div>   
+      </div>
+      <div class="swiper-slide">
+        <div class="inc_img ">
+            <img class="img_slide" src="./src/image/inc1.png" alt="">
+        </div>
+        <div class="text-slide  z-20 rounded-t-3xl rounded-r-3xl h-56 bg-white shadow-md py-6 px-4">
+            <div class="text-dep text-center">
+                <h3 class=" text-3xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
+                <h5 class=" ">Gói khám thai tổng quát</h5>
+                <p class="font-light text-slate-500">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+            </div>
+            <div class="sign_in  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
+        </div>   
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div> -->
+
+
+
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./src/image/banner1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="./src/image/inc1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="./src/image/inc2.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="swiper-button-next hidden"></div>
+    <div class="swiper-button-prev hidden"></div>
+    <div class="swiper-pagination hidden"></div>
+  </div> -->
+
+
+    <div class="flex w-full">
+        <aside class="fixed relative hidden w-64 h-full min-h-screen bg-blue-600 border-t lg:block">
+            <div class="px-6 py-1 bg-white">
+                <div class="">
+                    <p class="text-xl font-bold">Logo</p>
+                                    </div>
+            </div>
+            <nav class="pt-3 space-y-4 text-base">
+                <ul>
+                    <li class="group hover:bg-primary-100">
+                        <a href="dashboard.html" class="flex items-center px-6 py-3 text-white group-hover:bg-blue-700">
+                            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                class="mr-3 group-hover:text-primary-900" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                </path>
+                            </svg>Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="w-full">
+            <div x-cloak x-data="{isSideMenuOpen:false}">
+                <!--Mobile Nav-->
+                <div x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
+                  x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                  class="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
+                  style="display: none;"></div>
+                <aside class="fixed inset-y-0 z-40 flex-shrink-0 space-y-6 overflow-y-auto bg-white w-72 xl:hidden"
+                  x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
+                  x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0 transform -translate-x-20" @click.away="isSideMenuOpen=false"
+                  @keydown.escape="isSideMenuOpen=false" style="display: none;">
+                  <div class="mt-2 mb-4">
+                    <p class="text-xl font-bold">Logo</p>
+
+                                        <nav class="space-y-4 text-base">
+                        <ul>
+                            <li class="group hover:bg-blue-100">
+                              <a href="dashboard.html" class="flex items-center px-6 py-3 text-gray-900">
+                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                  class="mr-3 text-blue-600 group-hover:text-blue-900" xmlns="http://www.w3.org/2000/svg">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                                  </path>
+                                </svg>Dashboardsdsdasaasas
+                              </a>
+                            </li>
+                        </ul>
+                    </nav>
+                  </div>
+                </aside>
+                <div
+                  class="w-full px-4 py-3 mx-auto bg-white border-b shadow lg:py-4 md:max-w-full lg:max-w-screen-full md:px-24 lg:px-8">
+            
+                  <!--Desktop Nav-->
+                  <nav class="relative flex items-center justify-between">
+                    <div class="flex items-center">
+                      <div class="lg:hidden">
+                       <p class="my-4">Logos</p>
+                      </div>
+                    </div>
+                    <div class="hidden lg:block">
+                      <div class="flex items-center gap-2">
+                        <div class="relative px-2 text-gray-600" x-data="{ isOpen: false }">
+                          <button @click="isOpen = !isOpen" @keydown.escape="isOpen = false"
+                            class="flex items-center focus:outline-none">
+                            <img src="https://www.adobe.com/content/dam/offers-homepage/us/en/homepage/twitter_adobe.png"
+                              alt="avatar" class="w-8 h-8 rounded-full">
+                            <span class="px-1 text-sm font-medium">Adobe Corporation</span>
+                            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                              <path d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
+                                class="heroicon-ui"></path>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 lg:hidden">
+                      <button @click="isSideMenuOpen=true" aria-label="Open Menu" title="Open Menu"
+                        class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline">
+                        <svg class="w-5 h-5 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div>
+                <div class="m-4">
+                    <div class="relative">
+                        <div class="w-full overflow-x-scroll">
+                            <table class="divide-y divide-gray-200 table-auto">
+                                <thead
+                                    class="text-xs font-medium tracking-wider text-left text-white uppercase bg-blue-600 whitespace-nowrap">
+                                    <tr class="py-4 divide-x">
+                                        <th scope="col" class="sticky left-0 z-10 p-4 bg-blue-600">
+                                            Name</th>
+                                        <th scope="col" class="p-4">
+                                            Mobile Number</th>
+                                        <th scope="col" class="p-4">
+                                            Employee Id</th>
+                                        <th scope="col" class="p-4">
+                                            Email Id</th>
+                                        <th scope="col" class="p-4">
+                                            Address</th>
+                                        <th scope="col" class="p-4">
+                                            State</th>
+                                        <th scope="col" class="p-4">
+                                            Date of Birth</th>
+                                        <th scope="col" class="p-4">
+                                            Gender</th>
+                                        <th scope="col" class="p-4">
+                                            Aadhar Number</th>
+                                        <th scope="col" class="p-4">
+                                            PAN Number</th>
+                                        <th scope="col" class="p-4">
+                                            UAN Number</th>
+                                        <th scope="col" class="p-4">
+                                            ESI Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody
+                                    class="text-sm bg-white divide-y divide-gray-200 whitespace-nowrap">
+                                    <tr>
+                                        <td class="sticky left-0 w-full p-4 bg-white whitespace-nowrap">
+                                            <div class="flex items-center gap-2 w-max">
+                                                <img class="w-8 h-8 rounded-full"
+                                                    src="https://randomuser.me/api/portraits/men/11.jpg"
+                                                    alt="">
+                                                <a href="" class="font-medium text-blue-600">John
+                                                    Doe</a>
+                                            </div>
+                                        </td>
+                                        <td class="p-4">9192939494</td>
+                                        <td class="p-4">NA-1362</td>
+                                        <td class="p-4">johndow@gmail.com</td>
+                                        <td class="p-4">Raja Street, Pallipalayam, Tiruchengode</td>
+                                        <td class="p-4">Tamilnadu</td>
+                                        <td class="p-4">02-07-1995</td>
+                                        <td class="p-4">Male</td>
+                                        <td class="p-4">9876 5432 1098</td>
+                                        <td class="p-4">XYZAB5678P</td>
+                                        <td class="p-4">876543210987</td>
+                                        <td class="p-4">ESI87654321</td>
+                                    </tr>
+                                    </template>
+                                    <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center gap-4 pt-6 lg:flex-row lg:justify-between">
+                        <div class="flex items-center">
+                            <p class="pr-2 text-sm font-medium">Rows per page</p>
+                            <select id="jobtype" name="jobtype" autocomplete="jobtype"
+                                class="block w-16 p-1 mt-1 text-sm bg-white border border-gray-400 rounded shadow-sm disabled:cursor-not-allowed focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-base">
+                                <option>10</option>
+                                <option>25</option>
+                                <option>50</option>
+                                <option>100</option>
+                            </select>
+                        </div>
+                        <div>
+                            <nav class="relative z-0 inline-flex -space-x-px shadow-sm"
+                                aria-label="Pagination">
+                                <a href="#"
+                                    class="relative inline-flex items-center px-2 py-2 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-l-md hover:bg-blue-100">
+                                    <span class="sr-only">Previous</span>
+                                    <!-- Heroicon name: chevron-left -->
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="relative inline-flex items-center px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 hover:bg-blue-100">
+                                    1
+                                </a>
+                                <a href="#"
+                                    class="relative inline-flex items-center px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 hover:bg-blue-100">
+                                    2
+                                </a>
+                                <a href="#"
+                                    class="relative items-center hidden px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 md:inline-flex hover:bg-blue-100">
+                                    3
+                                </a>
+                                <a href="#"
+                                    class="relative inline-flex items-center px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 hover:bg-blue-100">
+                                    4
+                                </a>
+                                <a href="#"
+                                    class="relative inline-flex items-center px-4 py-2 text-base font-medium text-gray-700 bg-white border border-gray-300 hover:bg-blue-100">
+                                    5
+                                </a>
+                                <a href="#"
+                                    class="relative inline-flex items-center px-2 py-2 text-base font-medium text-gray-500 bg-white border border-gray-300 rounded-r-md hover:bg-blue-100">
+                                    <span class="sr-only">Next</span>
+                                    <!-- Heroicon name: chevron-right -->
+                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var menu = document.getElementById('menu');
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('w-full');
+            menu.classList.toggle('h-screen');
+        }
+        var swiper = new Swiper(".mySwiper1", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".vector_right",
+        prevEl: ".vector_left",
+    },
+    });
+    </script>
 
     <script src="./src/js/tem.js"></script>
 </body>

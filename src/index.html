@@ -3,177 +3,201 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="./css/style.css">
-    
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
-    <div class="header">
+    <header>
         <div class="container mx-auto">
-            <div class="header_menu flex justify-between ">
-                <div class="logo ">
+            <div class="flex justify-between ">
+                <div class="logo py-2">
                     <a href="">
                         <img src="./image/Logo 1.png" alt="">
                     </a>                   
                 </div>
-                <div class="menu flex  justify-center items-center">
-                    <ul class="menu_item flex text-xl font-medium ">
-                        <li class="px-3"><a href="">Ưu đãi</a></li>
-                        <li class="px-3"><a href="">Dịch vụ</a></li>
-                        <li class="px-3"><a href="">Giới thiệu</a></li>
-                        <li class="px-3"><a href="">Đội ngũ bác sĩ</a></li>
-                        <li class="px-3"><a href="">Bảng giá</a></li>
-                        <li class="px-3"><a href="">Thư viện</a></li>
-                        <li class="px-3"><a href="">Liên hệ</a></li>
-                    </ul>
+                <div class="md:static absolute bg-white md:min-h-fit left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                    <div class="menu">
+                        <ul class="flex font-semibold">
+                            <li class="">
+                                <a class="hover:text-gray-500 " href="">Ưu đãi</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Dịch vụ</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Giới thiệu</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Đội ngũ bác sĩ</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Bảng giá</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Thư viện</a>
+                            </li>
+                            <li>
+                                <a class="hover:text-gray-500" href="">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="hotline flex  justify-center ">
-                    <a class="items-center pl-4 pr-6 flex bg-gradient-to-br from-[#FFB469] to-[#E57709] rounded-full " href="tel:19001860" title="19001860">
-                        <div class="hotline-item w-6 h6 ">
-                            <img src="./image/icons/Phone.png" alt="" >
-                        </div>
-                        <div class="hotline-text text-white text-sm font-semibold leading-6">
-                            Hotline: 1900 1860
-                        </div>
-                    </a>
-                    
+                <div class="flex items-center">
+                    <div class="hotline flex rounded-full justify-center shadow-md  ">
+                        <a class="items-center pl-4 pr-5 flex rounded-full hover:bg-orange-400 transition duration-150 ease-in-out" href="tel:19001860" title="19001860">
+                            <div class="hotline-item h6 ">
+                                <img src="./image/icons/Phone.png" alt="" >
+                            </div>
+                            <div class="hotline-text text-white text-sm font-semibold leading-6">
+                                Hotline: 1900 1860
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <!-- <label for="nav__mobile-input" class="nav__bars-btn">
+                <label for="nav-mobile-input" class="nav_bars-btn py-4 ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
                 </label>
-    
-                <input type="checkbox" class="nav__input" id="nav__mobile-input" hidden>
-    
-                <label for="nav__mobile-input" class="nav_overlay"></label>
-                <div class="nav__mobile  ">
-                    <label for="nav__mobile-input" class="nav__mobile-close">            
+
+                <input type="checkbox" hidden name="" class="nav__input" id="nav-mobile-input">
+
+                <label for="nav-mobile-input" class="nav__overlay z-20"></label>
+                <div class="menu_mobile">
+                    <label for="nav-mobile-input" class="nav_mobile-close">                       
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
                     </label>
                     <ul class="nav__mobile-list ">
-                        <li class="nav__mobile-link"><a href="">Ưu đãi</a></li>
-                        <li class="nav__mobile-link"><a href="">Dịch vụ</a></li>
-                        <li class="nav__mobile-link"><a href="">Giới thiệu</a></li>
-                        <li class="nav__mobile-link"><a href="">Đội ngũ bác sĩ</a></li>
-                        <li class="nav__mobile-link"><a href="">Bảng giá</a></li>
-                        <li class="nav__mobile-link"><a href="">Thư viện</a></li>
-                        <li class="nav__mobile-link"><a href="">Liên hệ</a></li>
+                        <li class="">
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Ưu đãi</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Dịch vụ</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Giới thiệu</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Đội ngũ bác sĩ</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Bảng giá</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Thư viện</a>
+                        </li>
+                        <li>
+                            <a class="nav__mobile-link hover:text-gray-500" href="">Liên hệ</a>
+                        </li>
                     </ul>
-                </div>             -->
+                </div>
+            </div>
+        </div> 
+    </header>
+    <div class="slideshow z-10 relative">
+        <div class="swiper mySwiper ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide ">
+                <img class="w-full" src="./image/banner1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="w-full" src="./image/banner1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="w-full" src="./image/banner1.png" alt="">
+              </div>
+            </div>
+        </div>
+        <div class="ellipse absolute z-0">
+            <img src="./image/Ellipse 1126.png" alt="">
             </div>
         </div>
     </div>
-    <div class="slideshow-container z-10">
-    <!-- <div class="mySlides fade dot">
-      <img src="./image/banner1.png" style="width:100%">
-    </div>
-    <div class="mySlides fade dot">
-      <img src="./image/banner1.png" style="width:100%">
-    </div> -->
-    <div
-  id="carouselExampleSlidesOnly"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel">
-  <!--Carousel items-->
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    <!--First item-->
-    <div
-      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      data-twe-carousel-active>
-      <img
-        src="./image/banner1.png"
-        class="block w-full"
-        alt="Wild Landscape" />
-    </div>
-    <!--Second item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item>
-      <img
-        src="./image/banner1.png"
-        class="block w-full"
-        alt="Camera" />
-    </div>
-  </div>
-</div>
-
-    <div class="ellipse z-0">
-        <img src="./image/Ellipse 1126.png" alt="">
+    
+    <div class="main_inc relative z-10">
+        <div class="container mx-auto flex  ">
+            <div class="edit_con z-0 flex   -mx-2">
+                <div class="text_inc  mr-5  px-2">
+                    <h1 class="text_title ">Chương trình ưu đãi:</h1>
+                    <p class=" text-slate-500  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis porta. Vulputate tellus sapien pat sit ipsum molestie pharetran da volutpat semper.</p>
+                    <div class="vector flex ">
+                        <div class="vector_left flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709] transition duration-150 ease-in-out" >
+                                <img  src="./image/icons/Vector_left.svg" alt="">
+                        </div>
+                        <div class="vector_right   flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709] transition duration-150 ease-in-out" >
+                                <img  src="./image/icons/Vector_right.svg" alt="">
+                        </div>
+                    </div>              
+                </div>
+                <div class="swiper mySwiper1 w-[calc(100%+10rem)] px-2">
+                    <div class="swiper-wrapper pb-8">
+                        <div class="swiper-slide slide_inc ">
+                            <div class="inc_img ">
+                                <img class="img_slide" src="./image/inc1.png" alt="">
+                            </div>
+                            <div class="text_slide rounded-t-3xl rounded-r-3xl h-60 bg-white  shadow-xl py-6 px-4 relative -mt-10">
+                                <div class="text_dep text-center hover:text-white transition ">
+                                    <h3 class="text-4xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text  duration-300 ease-in-out">Ưu đãi 50%</h3>
+                                    <h5 class="mt-2 mb-2 duration-300 ease-in-out">Gói khám thai tổng quát</h5>
+                                    <p class="font-light text-slate-500 duration-300 ease-in-out">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                                </div>
+                                <div class="sign_in h-10 mt-4 py-2  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469] duration-300 ease-in-out">Đăng ký nhận ưu đãi</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_inc ">
+                            <div class="inc_img ">
+                                <img class="img_slide" src="./image/inc1.png" alt="">
+                            </div>
+                            <div class="text_slide rounded-t-3xl rounded-r-3xl h-60 bg-white  shadow-xl py-6 px-4 relative -mt-10">
+                                <div class="text_dep text-center hover:text-white transition ">
+                                    <h3 class="text-4xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text  duration-300 ease-in-out">Ưu đãi 50%</h3>
+                                    <h5 class="mt-2 mb-2 duration-300 ease-in-out">Gói khám thai tổng quát</h5>
+                                    <p class="font-light text-slate-500 duration-300 ease-in-out">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                                </div>
+                                <div class="sign_in h-10 mt-4 py-2  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469] duration-300 ease-in-out">Đăng ký nhận ưu đãi</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_inc ">
+                            <div class="inc_img ">
+                                <img class="img_slide" src="./image/inc1.png" alt="">
+                            </div>
+                            <div class="text_slide rounded-t-3xl rounded-r-3xl h-60 bg-white  shadow-xl py-6 px-4 relative -mt-10">
+                                <div class="text_dep text-center hover:text-white transition ">
+                                    <h3 class="text-4xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text  duration-300 ease-in-out">Ưu đãi 50%</h3>
+                                    <h5 class="mt-2 mb-2 duration-300 ease-in-out">Gói khám thai tổng quát</h5>
+                                    <p class="font-light text-slate-500 duration-300 ease-in-out">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                                </div>
+                                <div class="sign_in h-10 mt-4 py-2  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469] duration-300 ease-in-out">Đăng ký nhận ưu đãi</div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide_inc ">
+                            <div class="inc_img ">
+                                <img class="img_slide" src="./image/inc1.png" alt="">
+                            </div>
+                            <div class="text_slide rounded-t-3xl rounded-r-3xl h-60 bg-white  shadow-xl py-6 px-4 relative -mt-10">
+                                <div class="text_dep text-center hover:text-white transition ">
+                                    <h3 class="text-4xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text  duration-300 ease-in-out">Ưu đãi 50%</h3>
+                                    <h5 class="mt-2 mb-2 duration-300 ease-in-out">Gói khám thai tổng quát</h5>
+                                    <p class="font-light text-slate-500 duration-300 ease-in-out">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
+                                </div>
+                                <div class="sign_in h-10 mt-4 py-2  text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469] duration-300 ease-in-out">Đăng ký nhận ưu đãi</div>
+                            </div>
+                        </div>
+                    </div>
+                                       
+                </div>
+            </div>            
         </div>
+        
     </div>
-    <div class="main_inc">
-        <div class="main_inc_slide flex">
-            <div class="text_inc ">
-                <h1 class="text_title ">Chương trình ưu đãi:</h1>
-                <p class=" text-slate-500 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis porta. Vulputate tellus sapien pat sit ipsum molestie pharetran da volutpat semper.</p>
-                <div class="vector flex ">
-                    <div class="vector_left  flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" onclick="plusDivs(-1)">
-                            <img src="./image/icons/Vector_left.svg" alt="">
-                    </div>
-                    <div class="vector_right flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" onclick="plusDivs(1)">
-                            <img src="./image/icons/Vector_right.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="detail_inc flex ">
-                <div class="detail ">
-                    <div class="inc_img ">
-                        <img class="img_slide" src="./image/inc1.png" alt="">
-                    </div>
-                    <div class="text-slide bg-white shadow-md">
-                        <div class="text-dep mt-3">
-                            <h3 class=" text-center ml-12 text-2xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
-                            <h5 class="text-center font-semibold text-sm">Gói khám thai tổng quát</h5>
-                            <p class="font-light text-xs text-center">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
-                        </div>
-                        <div class="sign_in text-center text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
-                    </div>    
-                </div>
-                <div class="detail ">
-                    <div class="inc_img ">
-                        <img class="img_slide" src="./image/inc1.png" alt="">
-                    </div>
-                    <div class="text-slide bg-white shadow-md">
-                        <div class="text-dep mt-3">
-                            <h3 class=" text-center ml-12 text-2xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
-                            <h5 class="text-center font-semibold text-sm">Gói khám thai tổng quát</h5>
-                            <p class="font-light text-xs text-center">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
-                        </div>
-                        <div class="sign_in text-center text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
-                    </div>    
-                </div>
-                <div class="detail ">
-                    <div class="inc_img ">
-                        <img class="img_slide" src="./image/inc1.png" alt="">
-                    </div>
-                    <div class="text-slide bg-white shadow-md">
-                        <div class="text-dep mt-3">
-                            <h3 class=" text-center ml-12 text-2xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
-                            <h5 class="text-center font-semibold text-sm">Gói khám thai tổng quát</h5>
-                            <p class="font-light text-xs text-center">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
-                        </div>
-                        <div class="sign_in text-center text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
-                    </div>    
-                </div>
-                <div class="detail ">
-                    <div class="inc_img ">
-                        <img class="img_slide" src="./image/inc1.png" alt="">
-                    </div>
-                    <div class="text-slide bg-white shadow-md">
-                        <div class="text-dep mt-3">
-                            <h3 class=" text-center ml-12 text-2xl bg-gradient-to-r from-[#26BA5F] to-[#08B2FB] inline-block text-transparent bg-clip-text">Ưu đãi 50%</h3>
-                            <h5 class="text-center font-semibold text-sm">Gói khám thai tổng quát</h5>
-                            <p class="font-light text-xs text-center">Lorem ipsum dolor sit amet tarancebe consectetur adipiscing elit turpis.</p>
-                        </div>
-                        <div class="sign_in text-center text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFB469] to-[#E57709] rounded-full border border-[#FFB469]">Đăng ký nhận ưu đãi</div>
-                    </div>    
-                </div>
-            </div>
-        </div>
-    </div> 
+     
     <div class="contact ">
         <div class="container mx-auto flex relative z-10">
             <img class="img_contact w-2/4" src="./image/contact.png" alt="">
@@ -226,11 +250,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact_btn bg-gradient-to-br from-[#FFB469] to-[#E57709] rounded-full">
-                    <a href="tel:19001860" title="19001860">
-                        Liên hệ
-                    </a>
-                    
+                <div class="btn_ct">
+                    <div class="contact_btn bg-gradient-to-br from-[#FFB469] to-[#E57709] rounded-full shadow-lg">
+                        <a href="tel:19001860" title="19001860">
+                            Liên hệ
+                        </a>
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,35 +264,34 @@
             <img src="./image/Ellipse 1126.png" alt="">
         </div>
     </div>
-    
+
     <div class="bang_gia relative z-10 ">
-        <div class="back_gr z-0 bg-gradient-to-r from-[#C4EACE] to-[#B5E8FD]">
-        </div>
+        <div class="back_gr z-0 bg-gradient-to-r from-[#C4EACE] to-[#B5E8FD]"></div>
         <div class="container mx-auto relative z-20">
             <div class="bang bg-gradient-to-r from-[#50C577] to-[#2DBEFC] border-x-2 border-[#50C577] rounded-b-2xl">
                 <div class="bgound h-20 bg-gradient-to-r from-[#C4EACE] to-[#B5E8FD]"></div>
-                <div class=" bg-white  overflow-hidden">
-                    <div class=" flex items-center">
-                        <div class="ml-5 mr-5 ">
+                <div class=" bg-white  ">
+                    <div class=" flex items-center ">
+                        <div class="logo_left ml-5 mr-5 float-start ">
                             <img src="./image/Logo 1.png" alt="">
                         </div>
-                        <div class="text_title  text-center">
+                        <div class="text_title text-center mx-auto">
                             <h1 class="">Bảng giá các dịch vụ khám và chữa bệnh:</h1>
                             <p class="">Ghi chú: Lorem ipsum dolor sit amet, consectetur adipiscing elit lis iaculis ac felis</p>
                         </div>
                     </div>
-                    <div class=" pl-5 pr-5 pt-2 ">
-                        <table class="min-w-full overflow-y-auto h-32 mb-7 bg-gradient-to-r from-[#50C577] to-[#2DBEFC] border-collapse border border-slate-500 rounded-t-xl ">
+                    <div class=" pl-5 pr-5 pt-2  overflow-y-scroll">
+                        <table class="min-w-full  h-32 mb-7 bg-gradient-to-r from-[#50C577] to-[#2DBEFC] border-collapse border border-slate-500 rounded-t-xl ">
                             <thead class="text-white">
                                 <tr>
-                                    <th rowspan="2" class="w-1/12 px-4 py-2 text-sm font-medium border border-slate-50">STT</th>
-                                    <th rowspan="2" class="w-4/12 px-4 py-2 text-sm font-medium border border-slate-50">TÊN DỊCH VỤ</th>
-                                    <th colspan="2" class="w-3/12 px-4 py-2 text-sm font-medium border border-slate-50">GIÁ DỊCH VỤ DÀNH CHO KHÁCH HÀNG CÓ QUỐC TỊCH</th>
+                                    <th rowspan="2" class="w-1/12 px-4 py-2 lg:text-sm font-medium border border-slate-50">STT</th>
+                                    <th rowspan="2" class="w-4/12 px-4 py-2 lg:text-sm font-medium border border-slate-50">TÊN DỊCH VỤ</th>
+                                    <th colspan="2" class="w-3/12 px-4 py-2 lg:text-sm font-medium border border-slate-50">GIÁ DỊCH VỤ DÀNH CHO KHÁCH HÀNG CÓ QUỐC TỊCH</th>
                                     
                                 </tr>
                                 <tr>
-                                    <th class="w-2/12 px-4 py-2 text-sm font-medium border border-slate-50">Việt Nam</th>
-                                    <th class="w-2/12 px-4 py-2 text-sm font-medium border border-slate-50">Nước ngoài</th>
+                                    <th class="w-2/12 px-4 py-2 lg:text-sm font-medium border border-slate-50">Việt Nam</th>
+                                    <th class="w-2/12 px-4 py-2 lg:text-sm font-medium border border-slate-50">Nước ngoài</th>
                                 </tr>
                             </thead>
                             <tbody class="text-gray-600 ">
@@ -341,44 +366,598 @@
                                     <td class="px-4 py-2 border border-gray-200">Chăm sóc điều dưỡng tại nhà - Bệnh nhân nặng</td>
                                     <td class="px-4 py-2 border border-gray-200 text-center">200,000/giờ</td>
                                     <td class="px-4 py-2 border border-gray-200 text-center">400,000/giờ</td>
-                                    
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    
-                    
+                    </div> 
                 </div>                          
-                <div class=" bg-gradient-to-r from-[#50C577] to-[#2DBEFC] p-2 flex justify-center content-center rounded-b-2xl">
+                <div class="bang_footer bg-gradient-to-r from-[#50C577] to-[#2DBEFC] p-2 flex justify-center content-center rounded-b-2xl space-x-5">
                     <a class="flex" href="tel:19001860" title="19001860">
-                        <div class="hotline-item ">
+                        <div class=" ">
                             <img src="./image/icons/Phone.png" alt="" >
                         </div>
-                        <div class="hotline-text pl-1 text-white">
+                        <div class="bang_footer_text pl-1 lg:text-sm text-white">
                             Hotline: 1900 1860
                         </div>
                     </a>
                     <a class="flex" href="tel:19001860" title="19001860">
-                        <div class="hotline-item ">
+                        <div class=" ">
                             <img src="./image/icons/web.png" alt="" >
                         </div>
-                        <div class="pl-1 text-white">
+                        <div class="bang_footer_text pl-1 lg:text-sm text-white">
                             https://benhvienphuong dong.vn/
                         </div>
+                        
                     </a>
                 </div>                           
             </div>
         </div>
-        <!-- <div class="ellipse2 relative z-10">
-            <img src="./image/Ellipse 1126.png" alt="">
-        </div> -->
-        <div class="ellipse3 w-96 h-96 m-auto rounded-full border-spacing-96 border-black  relative z-10"></div>
-        
+        <div class="ellipse2 relative z-10">
+            <img src="./image/Ellipse 1127.png" alt="">
+        </div>      
     </div>
+
+    <div class="trongoi  ">
+        <div class="trongoi_dichvu flex relative z-10">
+            <div class="trongoi_image w-8/12">
+                <img src="./image/trongoi.png" alt="">
+            </div>
+            <div class="trongoi_text w-4/12 bg-white shadow-lg rounded-tl-3xl">
+                <div class="trongoi_text_intro">
+                    <h1 class="text-center">Bệnh viên Phương Đông tiên phong
+                        trong dịch vụ thai sản trọn gói</h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tale tincidunt tortor lobortis pretium nulla quis sem nullam rhoncus. Ornare  et dui sit massa. Volutpat porta leo pulvinar adipiscing gestas metus </p>
+                </div>
+                <div class="btn_trongoi">
+                    <div class="trongoi_text_btn text-center py-3 text-white bg-gradient-to-br from-[#FFB469] to-[#E57709] rounded-full shadow-lg">
+                        <a href="tel:19001860" title="19001860">
+                            Đăng ký tư vấn
+                        </a>
+                    </div>
+                </div>
+                    
+
+                
+                        
+            </div>
+        </div>          
+        <div class="ellipse3 z-0">
+            <img  src="./image/Ellipse 1126.png" alt="">
+        </div>
+    </div>
+
+    <div class="thietbi">
+        <div class="thietbi-text mb-10 ">
+            <div class="container flex justify-between">
+                <h1 class="text_title ">Hình ảnh về cơ sở vật chất, trang thiết bị</h1>
+                <div class="vector flex ">
+                    <div class="vector_left flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" >
+                            <img  src="./image/icons/Vector_left.svg" alt="">
+                    </div>
+                    <div class="vector_right   flex justify-center items-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709]" >
+                            <img  src="./image/icons/Vector_right.svg" alt="">
+                    </div>
+                </div>  
+            </div>                         
+        </div>
+        <div class="swiper mySwiper2 ">
+            <div class="swiper-wrapper ">
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi3.png" alt="">
+                    </div>                
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img">
+                        <img class="img_slide " src="./image/thietbi2.png" alt="">
+                    </div>             
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi3.png" alt="">
+                    </div>                  
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi4.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi5.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi4.png" alt="">
+                    </div>                
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi2.png" alt="">
+                    </div>             
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi3.png" alt="">
+                    </div>                  
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi4.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi5.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <div class="inc_img ">
+                        <img class="img_slide" src="./image/thietbi2.png" alt="">
+                    </div>
+                </div>
+            </div>  
+                             
+        </div>
+    </div>
+
+    <section class="doctor z-20">
+        <div class="ellipse4 z-0 ">
+            <img  src="./image/Ellipse 1126.png" alt="">
+        </div>
+        <div class="container relative">
+            <div class="title_doctor flex justify-between">
+                <h1>Đội ngũ bác sĩ bệnh viện đa khoa Phương Đông</h1>
+                <div class="title_doctor_search flex rounded-full justify-center   ">
+                    <a class="items-center flex bg-gradient-to-br from-[#FFB469] to-[#E57709] shadow-md rounded-full text-white text-center py-2 hover:bg-orange-400  px-5" href="">
+                        <div class="hotline-item  ">
+                            <img src="./image/icons/user-search.png" alt="" >
+                        </div>
+                        <div class="title_doctor_text text-white text-sm font-semibold leading-6">
+                            Tìm bác sĩ
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="info_doctor1 flex ">
+                <div class="ed_dt_item ">
+                    <div class="doctor_item flex items-center ">
+                        <div class="doctor_item_img">
+                            <img src="./image/doctor1.png" alt="">
+                        </div>
+                        <div class="doctor1_text ml-4">
+                            <div class="doctor_text_intro">
+                                <h5>BS: NGUYỄN TRUNG CHÍNH</h5>
+                                <p class="body2 mt-2 mb-4 w-[65%]">PGS.TS. Bác sĩ Ung bướu - Giám đốc  Bệnh viện Đa khoa Phương Đông</p>
+                            </div>
+                            <div class="doctor_text_dep">
+                                <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                                <div class="doctor_rate flex">
+                                    <p>Xếp hạng: </p>
+                                    <div class="flex items-center ml-2 space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    </div>
+                                </div>
+                            </div>                     
+                        </div>
+                    </div>
+                </div>
+                <div class="ed_dt_item ">
+                    <div class="doctor_item flex items-center  p-4">
+                        <div class="doctor_item_img">
+                            <img src="./image/doctor2.png" alt="">
+                        </div>
+                        <div class="doctor1_text ml-4">
+                            <div class="doctor_text_intro">
+                                <h5>BS: NGUYỄN HUY BẠO</h5>
+                                <p class="body2 mt-2 mb-4 w-[70%]">PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                            </div>
+                            <div class="doctor_text_dep">
+                                <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                                <div class="doctor_rate flex">
+                                    <p>Xếp hạng: </p>
+                                    <div class="flex items-center ml-2 space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    </div>
+                                </div>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>   
+            
+            <div class="info_doctor2 flex ">
+                <div class="doctor3 flex items-center w-6/12 p-4">
+                    <div class="doctor2_text ml-5 w-6/12 -mr-10">
+                        <div class="doctor_text_intro">
+                            <h5>BS: TRẦN KINH TRANG</h5>
+                            <div class="body2 mt-2 mb-4 w-[80%]">PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</div>
+                        </div>
+                        <div class="doctor_text_dep">
+                            <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                            <div class="flex">
+                                <p>Xếp hạng: </p>
+                                <div class="flex items-center ml-2 space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>
+                    <div>
+                        <img  src="./image/doctor3.png" alt="">
+                    </div>                 
+                    
+                </div>
+                <div class="doctor4 flex items-center w-6/12 p-4">
+                    <div class="doctor2_text ml-5 w-6/12 -mr-10">
+                        <div class="doctor_text_intro">
+                            <h5>DS: NGUYỄN THỊ KIM YẾN</h5>
+                            <div class="body2 mt-2 mb-4 w-[80%]">PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</div>
+                        </div>
+                        <div class="doctor_text_dep">
+                            <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                            <div class="flex">
+                                <p>Xếp hạng: </p>
+                                <div class="flex items-center ml-2 space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>
+                    <div>
+                        <img src="./image/doctor4.png" alt="">
+                    </div>          
+                    
+                </div>
+            </div>
+            <div class="info_doctor2_mobile flex hidden">
+                <div class="doctor3_mobile flex items-center w-6/12 p-4">
+                    <img  src="./image/doctor3.png" alt="">
+                    <div class="doctor2_text_mobile ml-5 w-6/12 -mr-10">
+                        <div class="doctor_text_intro_mobile">
+                            <h5>BS: TRẦN KINH TRANG</h5>
+                            <p class="body2 mt-2 mb-4 w-[80%]">PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                        </div>
+                        <div class="doctor_text_dep_mobile">
+                            <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                            <div class="doctor_rate_mobile flex">
+                                <p>Xếp hạng: </p>
+                                <div class="flex items-center ml-2 space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>                 
+                    
+                </div>
+                <div class="doctor4_mobile flex items-center w-6/12 p-4">
+                    <img src="./image/doctor4.png" alt="">
+                    <div class="doctor2_text_mobile ml-5 w-6/12 -mr-10">
+                        <div class="doctor_text_intro_mobile">
+                            <h5>DS: NGUYỄN THỊ KIM YẾN</h5>
+                            <p class="body2 mt-2 mb-4 w-[80%]">PGS.TS. Bác sĩ Ung bướu - Phó giám đốc Bệnh viện Đa khoa Phương Đông</p>
+                        </div>
+                        <div class="doctor_text_dep_mobile">
+                            <p class="mb-2">Kinh nghiệm: <span>20 năm</span> </p>
+                            <div class="doctor_rate_mobile flex">
+                                <p>Xếp hạng: </p>
+                                <div class="flex items-center ml-2 space-x-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><path fill="#FFD43B" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                                </div>
+                            </div>
+                        </div>     
+                    </div>          
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <div class="thainhi  mt-10 ">
+        <div class="ellipse5 absolute z-0">
+            <img src="./image/Ellipse1128.png" alt="">
+        </div>
+        
+        <div class="container ">
+            <div class="con1 flex items-center">
+                <img class="w-6/12" src="./image/thainhi1.png" alt="">
+                <div class="con1_text w-6/12  pl-10 ">
+                    <h1 class="mb-6">Chuyển dạ và sinh non có nguy hiểm?</h1>
+                    <h6 class="mb-2 mt-6">Tính nguy hiểm của bệnh</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis estellus etiam nisl pretium</p>
+                    <h6 class="mb-2 mt-4">Các cấp độ</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris.</p>
+                    <h6 class="mb-2 mt-4">Giải pháp</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus</p>
+                </div>
+            </div>
+            <div class="con2 flex items-center">
+                <div class="con2_text w-6/12 pr-10">
+                    <h1>Dấu hiệu nhận biết chuyển dạ và sinh non:</h1>
+                    <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis estellus etiam nisl pretium</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, odio in turpis nunc mollis diam viverra dictum. Tortor sed sapien ut tellus. Nunc etiam consectetur consectetur amet taranlete pellentesque varius vel donec. Malesuada morbi nisl cras turpis pretium. Habitant facilisis malesuada suscipit mus</p>
+                </div>
+                <img class="w-6/12" src="./image/thainhi2.png" alt="">
+            </div>
+            <div class="con2_mobile flex items-center hidden">
+                <img class="w-6/12" src="./image/thainhi2.png" alt="">
+                <div class="con2_text_mobile w-6/12 pr-10">
+                    <h1>Dấu hiệu nhận biết chuyển dạ và sinh non:</h1>
+                    <p class="mt-4 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis estellus etiam nisl pretium</p>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis est. Id tortor odio posuere a cursus netus massa. Tellus etiam nisl pretium feugiat nulla. Pulvinar nisl et suspendisse velit ornare sed dolor, convallis dolor. Et, dignissim amet sed orci at amet id nulla mauris.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, odio in turpis nunc mollis diam viverra dictum. Tortor sed sapien ut tellus. Nunc etiam consectetur consectetur amet taranlete pellentesque varius vel donec. Malesuada morbi nisl cras turpis pretium. Habitant facilisis malesuada suscipit mus</p>
+                </div>             
+            </div>    
+        </div>
+        <div class="ellipse6 absolute">
+            <img src="./image/Ellipse 1126.png" alt="">
+        </div>
+    </div>
+    <section>
+        <div class="container  z-10">
+            <div class="giaiphap_ellip w-fit h-fit  z-0">
+                <img src="./image/Ellipse 1126.png" alt="">
+            </div>
+            <div class="giaiphap flex items-center z-10">
+                <div class="giaiphap_video w-6/12 ">
+                    <a href="https://www.youtube.com/watch?v=FBwBR9rqN_0" class="img relative fancy"  data-fancybox="gallery">
+                        <img src="./image/image_video.png" alt="">
+                    </a>
+                    <!-- <img src="./image/icons/youtube.svg" alt=""> -->
+                </div>
+                <div class="giaiphap_text w-6/12 ">
+                    <div class="trongoi_text_intro">
+                        <h1>Giải pháp an toàn hãy lựa chọn dịch vụ thai sản trọn gói tại bệnh viện Phương Đông</h1>
+                        <p class="mt-6 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut risus luctus donec  Lorem malesuada scelerisque euismod ullamcorper ac lacus aliquet quisque. Pulvinar aenean fusce pulvinar elementum odio dolor lorem aenean quis. Ridiculus mattis. </p>
+                        <a class="btn_contact  items-center  flex justify-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709] hover:bg-orange-400" href="tel:19001860" title="19001860">
+                            <div class="hotline-item w-6 h6 mr-2">
+                                <img src="./image/icons/Phone.png" alt="" >
+                            </div>
+                            <div class="hotline-text text-white text-sm font-semibold leading-6">
+                                Liên hệ ngay
+                            </div>
+                        </a>
+                    </div>         
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <section class="chamsoc">
+        <div class="container flex items-center mt-20">
+            <div class="con_text w-6/12">
+                <h1>Tại sao bạn nên chọn gói dịch vụ thai sản tại bệnh viện Phương Đông</h1>
+                <div class="context1 mt-6 space-y-2 mb-4">
+                    <h6>Khám định kỳ với Bác sĩ sản khoa.</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context2 space-y-2 mb-4">
+                    <h6>Chăm sóc thai kỳ cùng bác sĩ Sản khoa hàng đầuKhám định kỳ với Bác sĩ sản khoa.</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context3 space-y-2 mb-4">
+                    <h6>Ekip đón bé chuyên môn cao, có khả năng xử lý nhiều ca khó</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context4 mb-10 space-y-2 ">
+                    <h6>Chăm lo cho mẹ và bé chu đáo - Cả nhà nhàn tênh</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <a class="btn_contact  items-center  flex justify-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709] hover:bg-orange-600" href="tel:19001860" title="19001860">
+                    <div class="hotline-item w-6 h6 mr-2">
+                        <img src="./image/icons/Phone.png" alt="" >
+                    </div>
+                    <div class="hotline-text text-white text-sm font-semibold leading-6">
+                        Liên hệ ngay
+                    </div>
+                </a>
+            </div>
+            <div class="con_img w-6/12">
+                <img src="./image/chamsoc.png" alt="">
+            </div>
+        </div>
+        <div class="container con_chamsoc flex items-center mt-20 hidden">
+            <div class="chamsoc_img w-6/12">
+                <img src="./image/chamsoc.png" alt="">
+            </div>
+            <div class="con_text w-6/12">
+                <h1>Tại sao bạn nên chọn gói dịch vụ thai sản tại bệnh viện Phương Đông</h1>
+                <div class="context1 mt-6 space-y-2 mb-4">
+                    <h6>Khám định kỳ với Bác sĩ sản khoa.</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context2 space-y-2 mb-4">
+                    <h6>Chăm sóc thai kỳ cùng bác sĩ Sản khoa hàng đầuKhám định kỳ với Bác sĩ sản khoa.</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context3 space-y-2 mb-4">
+                    <h6>Ekip đón bé chuyên môn cao, có khả năng xử lý nhiều ca khó</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <div class="context4 mb-10 space-y-2 ">
+                    <h6>Chăm lo cho mẹ và bé chu đáo - Cả nhà nhàn tênh</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat risus </p>
+                </div>
+                <a class="btn_contact items-center  flex justify-center rounded-full bg-gradient-to-br from-[#FFB469] to-[#E57709] hover:bg-orange-400" href="tel:19001860" title="19001860">
+                    <div class="hotline-item w-6 h6 mr-2">
+                        <img src="./image/icons/Phone.png" alt="" >
+                    </div>
+                    <div class="hotline-text  text-white text-sm font-semibold leading-6">
+                        Liên hệ ngay
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <section class="hauqua mb-5">
+        <div class="container">
+            <div class="title_intro text-center mb-10">
+                <h1>Hậu quả chuyển dạ và sinh non nếu không điều trị kịp thời</h1>
+                <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, odio in turpis nunc mollis diam viverra dictum. Tortor <br> sed sapien ut tellus. Nunc etiam consectetur consectetur amet Habitant facilisis malesuada suscipit mus</p>
+            </div>
+            <div class="div1 flex">
+                <div class="div1_small">
+                    <img src="./image/hauqua1.png" alt="">
+                    <div class="div1_small_text mt-6">
+                        <h4>Gây sảy thai</h4>
+                        <p class="w-5/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis </p>
+                    </div>
+                </div>
+                <div class="div1_small2">
+                    <img src="./image/hauqua2.png" alt="">
+                    <div class="div1_small2_text mt-6">
+                        <h4>Nguy hiểm cho cả hai mẹ con</h4>
+                        <p class="w-5/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis </p>
+                    </div>
+                </div>
+            </div>
+            <div class="div2 flex justify-end">
+                <div class="div2_small">
+                    <img src="./image/hauqua3.png" alt="">
+                    <div class="div2_small_text mt-6">
+                        <h4>Sinh sản gặp khó khăn</h4>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis </p>
+                    </div>
+                </div>
+                <div class="div2_small2 ">
+                    <img src="./image/hauqua4.png" alt="">
+                    <div class="div2_small2_text mt-6">
+                        <h4>Gây mất khả năng sinh sản</h4>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, nec morbi mauris, turpis fringilla condimentum urna sagittis </p>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer_ellip">
+            <img src="./image/footer_Vector.png" alt="">
+        </div>
+        <div class=" bg-gradient-to-r from-[#1CAB55] to-[#04A4EC] relative">
+            <div class="container mb-4 pt-4">
+                <div class="flex justify-center items-center mb-4">
+                    <div class="logo w-3/12">
+                        <img src="./image/Logo2.png" alt="">
+                    </div>
+                    <h6 class="text-white w-4/12">Thông tin liên hệ</h6>
+                    <h6 class="text-white w-3/12">Giờ làm việc</h6>
+                    <h6 class="text-white w-2/12">Theo dõi chúng tôi</h6>                  
+                </div>
+                <div class="flex">
+                    <div class="w-3/12">
+                        <h6 class="text-white">BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG</h6>                       
+                        <p class="text-white w-[90%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna sit morbi nisl contale consectetur pellentesque ullamcorper con viverra id cursus hendreritenim ultricies</p>
+                    </div>
+                    <div class="w-4/12 space-y-2">
+                        <p class="text-white">Địa chỉ: Số 9, Phố Viên, Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội</p>
+                        <p class="text-white">Email: <a href="http://bvphuongdong@phuongdonghospital.vn">bvphuongdong@phuongdonghospital.vn</a></p>
+                        <p class="text-white"><a href="http://info.benhvienphuongdong@gmail.com">info.benhvienphuongdong@gmail.com</a></p>
+                        <p class="text-white"><a href="tel:19001806" title="19001806">Tổng đài tư vấn: 19001806</a></p>
+                    </div>
+                    <div class="w-3/12 space-y-2">
+                        <p class="text-white">Từ 7:00 - 19:00 từ Thứ 2 đến CN</p>
+                        <p class="text-white"><a href="tel:0833 015 115">Cấp cứu 24/7: 0833 015 115</a></p>
+                        <p class="text-white"><a href="tel:0911 615 115">Hotline Tiêm chủng: 0911 615 115</a></p>
+                        <p class="text-white"><a href="tel:1900 1806">Hotline Hỗ trợ khách hàng: 1900 1806</a></p>
+                    </div>
+                    <div class="w-2/12 space-y-2">
+                        <div class="flex space-x-3">
+                            <a href="http://facebook.com"><img src="./image/icons/footer_icon_fb.png" alt=""></a>
+                            <a href="http://youtube.com"><img src="./image/icons/footer_icon_yt.png" alt=""></a>
+                            <a href="http://tiktok.com"><img src="./image/icons/footer_icon_tt.png" alt=""></a>
+                        </div>
+                        <div>
+                            <img src="./image/bo_cong_thuong.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footer_mobile mb-4 pt-4 hidden space-y-4">
+                <div class="footer_mobile_first flex justify-center items-center space-y-2">
+                    <div class="logo ">
+                        <img src="./image/Logo2.png" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h6 class="text-white">BỆNH VIỆN ĐA KHOA PHƯƠNG ĐÔNG</h6>                       
+                        <p class="text-white ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna sit morbi nisl contale consectetur pellentesque ullamcorper con viverra id cursus hendreritenim ultricies</p>
+                    </div>            
+                </div>
+                <div class="footer_mobile_body1 text-center space-y-2">
+                    <h6 class="text-white ">Thông tin liên hệ</h6>
+                    <p class="text-white">Địa chỉ: Số 9, Phố Viên, Cổ Nhuế 2, Bắc Từ Liêm, Hà Nội</p>
+                    <p class="text-white">Email: bvphuongdong@phuongdonghospital.vn</p>
+                    <p class="text-white">info.benhvienphuongdong@gmail.com</p>
+                    <p class="text-white">Tổng đài tư vấn: 19001806</p>
+                </div>
+                <div class="footer_mobile_body2 text-center space-y-2">
+                    <h6 class="text-white">Giờ làm việc</h6>
+                    <p class="text-white">Từ 7:00 - 19:00 từ Thứ 2 đến CN</p>
+                    <p class="text-white">Cấp cứu 24/7: 0833 015 115</p>
+                    <p class="text-white">Hotline Tiêm chủng: 0911 615 115</p>
+                    <p class="text-white">Hotline Hỗ trợ khách hàng: 1900 1806</p>
+                </div>
+                <div class="footer_mobile_body3 space-y-2 text-center">
+                    <h6 class="text-white">Theo dõi chúng tôi</h6>
+                    <div class="flex space-x-3 justify-center">
+                        <a href="http://"><img src="./image/icons/footer_icon_fb.png" alt=""></a>
+                        <a href="http://"><img src="./image/icons/footer_icon_yt.png" alt=""></a>
+                        <a href="http://"><img src="./image/icons/footer_icon_tt.png" alt=""></a>
+                    </div>
+                    <div class="footer_mobile_body3_img">
+                        <img src="./image/bo_cong_thuong.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer_mobile_last text-white text-center pt-2 pb-2 ">
+                © Copyright 2022 Bệnh Viện Đa khoa Phương Đông. All rights reserved
+            </div>
+        </div>
+        
+        
+    </footer>
 
-    <script src="./js/tem.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/tem.js" defer></script>    
 </body>
 </html>

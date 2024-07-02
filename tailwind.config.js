@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.html"],
   theme: {
     fontSize: {
       sm: '0.875rem',
@@ -12,8 +12,15 @@ module.exports = {
       '5xl': '2.25rem',
     },
     extend: {
+      fontFamily: {
+        'sans': ['Roboto', 'system-ui']
+      },
       borderRadius: {
         '3xl': '2.5rem',
+      },
+      container: {
+        center: true,
+        padding: '1rem',
       }
     },
   },

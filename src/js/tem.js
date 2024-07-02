@@ -1,46 +1,97 @@
-// let slideIndex = 0;
-//         showSlides();
-        
-//         function showSlides() {
-//           let i;
-//           let slides = document.getElementsByClassName("mySlides");
-//           let dots = document.getElementsByClassName("dot");
-//           for (i = 0; i < slides.length; i++) {
-//             slides[i].style.display = "none";  
-//           }
-//           slideIndex++;
-//           if (slideIndex > slides.length) {slideIndex = 1}    
-//           for (i = 0; i < dots.length; i++) {
-//             dots[i].className = dots[i].className.replace(" active", "");
-//           }
-//           slides[slideIndex-1].style.display = "block";  
-//           dots[slideIndex-1].className += " active";
-//           setTimeout(showSlides, 2000); // Change image every 2 seconds
-//         }
-
-var swiper = new Swiper(".multiple-slide-carousel", {
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".multiple-slide-carousel .swiper-button-next",
-    prevEl: ".multiple-slide-carousel .swiper-button-prev",
-  },
-  breakpoints: {
-   1920: {
-       slidesPerView: 3,
-       spaceBetween: 30
-   },
-   1028: {
-       slidesPerView: 2,
-       spaceBetween: 30
-   },
-   990: {
-       slidesPerView: 1,
-       spaceBetween: 0
-   }
- }
+// 
+// slier banner 
+var swiper_banner = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });
 
+var swiper_inc = new Swiper(".mySwiper1", {
+    slidesPerView: 3.5,
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        },
+        // when window width is >= 640px
+        740: {
+            slidesPerView: 2.5,
+            spaceBetween: 30
+        },
+        1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 30
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".vector_right",
+        prevEl: ".vector_left",
+    },
+});
 
+var swiper_tb = new Swiper(".mySwiper2", {
+    slidesPerView: 6,
+    spaceBetween: 30,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        // // when window width is >= 480px
+        // 480: {
+        //     slidesPerView: 3.5,
+        //     spaceBetween: 30
+        // },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 6,
+            spaceBetween: 30
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".vector_right",
+        prevEl: ".vector_left",
+    },
+});
+// video fancybox
+var fancyImages = function () {
+    if ($(".fancy").length == 0) return;
+    $(".fancy").fancybox({
+        loop: true,
+        buttons: ["zoom", "share", "slideShow", "fullScreen", "thumbs", "close"],
+        thumbs: {
+            loop: true,
+            autoStart: false,
+            axis: "x",
+        },
+    });
+};
 
