@@ -35,11 +35,11 @@ var swiper_inc = new Swiper(".mySwiper1", {
         // when window width is >= 640px
         740: {
             slidesPerView: 2.5,
-            spaceBetween: 30
+            spaceBetween: 20
         },
         1024: {
             slidesPerView: 3.5,
-            spaceBetween: 30
+            spaceBetween: 20
         }
     },
     pagination: {
@@ -55,6 +55,7 @@ var swiper_inc = new Swiper(".mySwiper1", {
 var swiper_tb = new Swiper(".mySwiper2", {
     slidesPerView: 6,
     spaceBetween: 30,
+    loop: true,
     breakpoints: {
         // when window width is >= 320px
         320: {
