@@ -7,18 +7,19 @@
     -webkit-text-fill-color: transparent;
 } */
  .menu > ul >li > a:hover {
-    color: #fff;
- }
-.menu:hover{
-    color: #fff;
-    /* background: -webkit-gradient(linear, left top, right top, from(#263b95), to(#07d0c9)); */
-    /* background: linear-gradient(to right, #50C577, #2DBEFC);
+    /* color: #fff; */
+    background: linear-gradient(to right, #50C577, #2DBEFC);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
+    -webkit-text-fill-color: transparent;
+ }
+ 
+
 .hotline {
     background-image: linear-gradient(180deg, #FFB469, #E57709);
     height: 40px;
+}
+.hotline:hover {
+    background: linear-gradient(to right, #50C577, #2DBEFC);
 }
 .sub1{
     font-weight: 500;
