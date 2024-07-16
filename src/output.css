@@ -985,6 +985,14 @@ span {
   border-top-left-radius: 2.5rem;
 }
 
+.rounded-br-3xl {
+  border-bottom-right-radius: 2.5rem;
+}
+
+.rounded-tr-3xl {
+  border-top-right-radius: 2.5rem;
+}
+
 .border {
   border-width: 1px;
 }
