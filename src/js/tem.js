@@ -18,8 +18,6 @@ var swiper_banner = new Swiper(".mySwiper", {
 });
 
 var swiper_inc = new Swiper(".mySwiper1", {
-    slidesPerView: 3.5,
-    spaceBetween: 30,
     loop: true,
     breakpoints: {
         // when window width is >= 320px
@@ -39,7 +37,7 @@ var swiper_inc = new Swiper(".mySwiper1", {
         },
         1024: {
             slidesPerView: 3.5,
-            spaceBetween: 20
+            spaceBetween: 30
         }
     },
     pagination: {

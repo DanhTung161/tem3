@@ -223,11 +223,11 @@ margin-bottom: 15px;
     margin-left: -270px;
     margin-bottom: -450px;
 }
-.ellipse5 {
+/* .ellipse5 {
     margin-top: -286px;
     margin-right: -1000px;
     margin-left: 1515px;
-}
+} */
 .ellipse6 {
     width: 507px;
     height: 507px;
@@ -408,6 +408,9 @@ footer {
 
 /* Mobile: width < 740px */
 @media only screen and (max-width: 46.1875em) {
+    h1{
+        font-size: 26px;
+    }
     header {
         .container {
             
@@ -591,7 +594,7 @@ footer {
                     margin-right: 0;
                     margin-top: -40px;
                     h1 {
-                        font-size: 30px;
+                        font-size: 26px;
                     }
                     p {
                         margin-bottom: 10px;

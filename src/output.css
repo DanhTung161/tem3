@@ -671,6 +671,14 @@ span {
   top: -100%;
 }
 
+.top-4 {
+  top: 1rem;
+}
+
+.top-\[-18rem\] {
+  top: -18rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1252,10 +1260,6 @@ span {
   transition-duration: 150ms;
 }
 
-.duration-150 {
-  transition-duration: 150ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -1299,6 +1303,11 @@ span {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
